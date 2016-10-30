@@ -1,0 +1,17 @@
+{
+    "name": "bitaac/theme-retro",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Kristoffer Eklund",
+            "email": "kristoffereklund1@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bitaac\\Theme\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
