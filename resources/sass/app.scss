@@ -196,12 +196,21 @@ hr {
 }
 
 // .forum-post-gamemaster {
-//     border-style: solid;
-//     border-width: 3px;
-//     -moz-border-image: url('../images/forum-gm-border.png') 3 repeat;
-//     -webkit-border-image: url('../images/forum-gm-border.png') 3 repeat;
-//     -o-border-image: url('../images/forum-gm-border.png') 3 repeat;
-//     border-image: url('../images/forum-gm-border.png') 3 repeat;
+//     // border-style: solid;
+//     // border-width: 3px;
+//     // -moz-border-image: url('../images/forum-gm-border.png') 3 repeat;
+//     // -webkit-border-image: url('../images/forum-gm-border.png') 3 repeat;
+//     // -o-border-image: url('../images/forum-gm-border.png') 3 repeat;
+//     // border-image: url('../images/forum-gm-border.png') 3 repeat;
+//       outline: 1px solid black;
+//       border: 2px solid #CBA600;
+//       box-shadow: inset 0 0 1px #000,
+//         inset 0 0 1px #000,
+//         inset 0 0 1px #000,
+//         inset 0 0 1px #000,
+//         inset 0 0 1px #000;
+//       width: 200px;
+//       height: 200px;
 // }
 
 #pandaac {
@@ -983,14 +992,16 @@ table.forum-posts {
 
 	.forum-post-gamemaster-top {
 		& > td:nth-child(odd) {
-			border-image: url('../images/forum-gm-border.png') 3 repeat;
-    		border-width: 3px 0 0 3px;
+			// border-image: url('../images/forum-gm-border.png') 3 repeat;
+    		// border-width: 3px 0 0 3px;
+            border: 3px solid transparent;
 		}
 
 		& > td:nth-child(even) {
-			border-image: url('../images/forum-gm-border.png') 3 repeat;
-			border-width: 3px 3px 0 0;
-			position: relative;
+			// border-image: url('../images/forum-gm-border.png') 3 repeat;
+			// border-width: 3px 3px 0 0;
+			// position: relative;
+            border: 3px solid transparent;
 		}
 
 		& > td:nth-child(even)::before {
@@ -1073,12 +1084,14 @@ table.forum-posts {
 		& > td:nth-child(odd) {
 			border-image: url('../images/forum-gm-border.png') 3 repeat;
     		border-width: 0px 0 3px 3px;
+            border-style: solid;
 			position: relative;
 		}
 
 		& > td:nth-child(even) {
 			border-image: url('../images/forum-gm-border.png') 3 repeat;
 			border-width: 0px 3px 3px 0;
+            border-style: solid;
 			position: relative;
 		}
 

@@ -708,14 +708,9 @@ table.forum-posts {
   table.forum-posts tr:nth-child(odd) td {
     background-color: #f1e0c6; }
   table.forum-posts .forum-post-gamemaster-top > td:nth-child(odd) {
-    -o-border-image: url("../images/forum-gm-border.png") 3 repeat;
-    border-image: url("../images/forum-gm-border.png") 3 repeat;
-    border-width: 3px 0 0 3px; }
+    border: 3px solid transparent; }
   table.forum-posts .forum-post-gamemaster-top > td:nth-child(even) {
-    -o-border-image: url("../images/forum-gm-border.png") 3 repeat;
-    border-image: url("../images/forum-gm-border.png") 3 repeat;
-    border-width: 3px 3px 0 0;
-    position: relative; }
+    border: 3px solid transparent; }
   table.forum-posts .forum-post-gamemaster-top > td:nth-child(even)::before {
     background-image: url("../images/forum-gm-border-filler.png");
     position: absolute;
@@ -776,11 +771,13 @@ table.forum-posts {
     -o-border-image: url("../images/forum-gm-border.png") 3 repeat;
     border-image: url("../images/forum-gm-border.png") 3 repeat;
     border-width: 0px 0 3px 3px;
+    border-style: solid;
     position: relative; }
   table.forum-posts .forum-post-gamemaster-bot > td:nth-child(even) {
     -o-border-image: url("../images/forum-gm-border.png") 3 repeat;
     border-image: url("../images/forum-gm-border.png") 3 repeat;
     border-width: 0px 3px 3px 0;
+    border-style: solid;
     position: relative; }
   table.forum-posts .forum-post-gamemaster-bot > td:nth-child(even)::before {
     background-image: url("../images/forum-gm-border-filler-vertical.png");
