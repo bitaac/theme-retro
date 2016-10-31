@@ -961,59 +961,59 @@ article.news {
     margin: 0 !important;
 }
 
-// table.forum-posts {
-//     border-collapse: separate;
-//     border-spacing: 1px;
-//
-// 	th {
-// 		background-color: #505050;
-// 		text-align: left;
-// 		padding: 4px;
-// 		color: #fff;
-// 	}
-//
-// 	td {
-// 		background-color: #d4c0a1;
-// 		padding: 4px;
-// 	}
-//
-// 	tr:nth-child(odd) td {
-// 		background-color: #f1e0c6;
-// 	}
-//
-// 	.forum-post-gamemaster-top {
-// 		& > td:nth-child(odd) {
-// 			border-image: url('../images/forum-gm-border.png') 3 repeat;
-//     		border-width: 3px 0 0 3px;
-// 		}
-//
-// 		& > td:nth-child(even) {
-// 			border-image: url('../images/forum-gm-border.png') 3 repeat;
-// 			border-width: 3px 3px 0 0;
-// 			position: relative;
-// 		}
-//
-// 		& > td:nth-child(even)::before {
-// 			background-image: url('../images/forum-gm-border-filler.png');
-// 			position: absolute;
-// 			content: '';
-// 			height: 3px;
-// 			width: 1px;
-// 			left: -1px;
-// 			top: -3px;
-// 		}
-//
-// 		& > td:nth-child(even)::after {
-// 			background-image: url('../images/forum-gm-border-filler.png');
-// 			position: absolute;
-// 			bottom: -3px;
-// 			content: '';
-// 			height: 3px;
-// 			width: 1px;
-// 			left: -1px;
-// 		}
-// 	}
-// }
+table.forum-posts {
+    border-collapse: separate;
+    border-spacing: 1px;
+
+	th {
+		background-color: #505050;
+		text-align: left;
+		padding: 4px;
+		color: #fff;
+	}
+
+	td {
+		background-color: #d4c0a1;
+		padding: 4px;
+	}
+
+	tr:nth-child(odd) td {
+		background-color: #f1e0c6;
+	}
+
+	.forum-post-gamemaster-top {
+		& > td:nth-child(odd) {
+			border-image: url('../images/forum-gm-border.png') 3 repeat;
+    		border-width: 3px 0 0 3px;
+		}
+
+		& > td:nth-child(even) {
+			border-image: url('../images/forum-gm-border.png') 3 repeat;
+			border-width: 3px 3px 0 0;
+			position: relative;
+		}
+
+		& > td:nth-child(even)::before {
+			background-image: url('../images/forum-gm-border-filler.png');
+			position: absolute;
+			content: '';
+			height: 3px;
+			width: 1px;
+			left: -1px;
+			top: -3px;
+		}
+
+		& > td:nth-child(even)::after {
+			background-image: url('../images/forum-gm-border-filler.png');
+			position: absolute;
+			bottom: -3px;
+			content: '';
+			height: 3px;
+			width: 1px;
+			left: -1px;
+		}
+	}
+}
 
 table.forum-posts {
     border-collapse: separate;

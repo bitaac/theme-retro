@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="{{ asset('bitaac/retro-theme/images/favicon.png') }}">
 
         <!-- Stylesheets -->
-        <link href="{{ asset('bitaac/retro-theme/css/app.css?v=1454524686') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('bitaac/retro-theme/css/app.css?v=14534524686') }}" rel="stylesheet" media="all">
         <link href="{{ asset('bitaac/retro-theme/css/colorbox.css?v=1454524555') }}" rel="stylesheet" media="all">
         <link href="{{ asset('bitaac/retro-theme/wysiwyg/dist/ui/trumbowyg.min.css') }}" rel="stylesheet" media="all">
 
@@ -51,6 +51,9 @@
                             <li><a href="{{ url('/deaths') }}">Deaths</a></li>
                             <li><a href="{{ url('/store') }}">Shop Offers</a></li>
                             <li><a href="{{ url('/store/offers') }}">Buy Points</a></li>
+                            @if (Auth::check() && Auth::user()->isAdmin())
+                                <li><a href="{{ url('/admin') }}">Adminpanel</a></li>
+                            @endif
                         </ul>
 
                         <div class="line wide"></div>
@@ -103,8 +106,7 @@
 
 
         <!-- Javascripts -->
-        <script src="{{ asset('bitaac/retro-theme/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('bitaac/retro-theme/js/app.min.js') }}"></script>
+        <script src="{{ asset('bitaac/retro-theme/js/app.js') }}"></script>
         <script src="{{ asset('bitaac/retro-theme/wysiwyg/dist/trumbowyg.min.js') }}"></script>
         <script>
             $('#reply').trumbowyg({
