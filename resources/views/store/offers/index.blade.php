@@ -13,7 +13,7 @@
     <div class="store-products">
         {{-- Products. --}}
         
-        @if(config('bitaac.paytal.paypal.enabled'))
+        @if(config('bitaac.gateways.paypal.enabled'))
             <div class="product" style="height: 280px;">
                 <header class="header">Pay with PayPal</header>
 

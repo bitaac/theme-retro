@@ -20,7 +20,6 @@
         </tr>
     </table>
 
-
     @if ($products->count())
         <div class="store-products">
             {{-- Products. --}}

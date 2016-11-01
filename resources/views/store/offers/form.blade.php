@@ -5,7 +5,7 @@
     @section('breadcrumbs')
         <li><a href="{{ url('/store') }}">Store</a>
         <li><a href="{{ url('/store/offers') }}">Offers</a></li>
-        <li>Paypal
+        <li>{{ $gateway->presentable }}
     @stop
 
     {{-- Page content. --}}
@@ -21,9 +21,9 @@
         </tr>
 
         {{-- Products. --}}
-        @foreach (config('bitaac.paytal.paypal.offers') as $price => $points)
+        @foreach ($gateway->offers as $price => $points)
             <tr>
-                <td width="32" height="32" valign="middle" align="center"><img src="https://cdn.pandaac.io/items/1076/2319.gif"></td>
+                <td width="32" height="32" valign="middle" align="center"><img src="https://cdn.rawgit.com/pandaac-cdn/items/1076/2319.gif"></td>
                 <td>
                     <strong>Purchase {{ $points }} Points</strong><br>
                     <small>
@@ -31,7 +31,7 @@
                     </small>
                 </td>
                 <td>{{ $points }}</td>
-                <td>{{ $price }} {{ config('bitaac::paypal.currency') }}</td>
+                <td>{{ $price }} {{ $gateway->currency }}</td>
                 <td>
                     <form method="POST">
                         {!! csrf_field() !!}
