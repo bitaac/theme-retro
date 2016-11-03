@@ -34,19 +34,19 @@
                             {{ $product->title }}
                         </h4>
 
-                        <img src="https://cdn.pandaac.io/items/1076/{{ $product->item_id }}.gif" width="32" height="32">
+                        <img src="https://cdn.rawgit.com/pandaac-cdn/items/1076/{{ $product->item_id }}.gif" width="32" height="32">
 
                         <br><br>
 
                         @if ($product->description)
-                            <p>{{ nl2br(e(lines($product->description, 3))) }}</p>
+                            <p>{{ e(lines($product->description, 3)) }}</p>
                         @endif
                         
                         <footer class="footer">
                             @if (Auth::check() and Auth::user()->bit->points >= $product->points)
-                                <a href="#" class="claim">Claim for <span>{{ $product->points }}</span> points!</a>
+                                <a href="{{ url('/store/claim/'.$product->id) }}" class="claim">Claim for <span>{{ $product->points }}</span> points!</a>
                                 <small>
-                                    ... or <a href="#">purchase points</a>!
+                                    ... or <a href="{{ url('/store/offers') }}">purchase points</a>!
                                 </small>
                             @else
                                 <a href="#" class="claim disabled">costs <span>{{ $product->points }}</span> points</a>

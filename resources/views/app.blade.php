@@ -12,7 +12,7 @@
         <link href="{{ asset('bitaac/retro-theme/css/colorbox.css?v=1454524555') }}" rel="stylesheet" media="all">
         <link href="{{ asset('bitaac/retro-theme/wysiwyg/dist/ui/trumbowyg.min.css') }}" rel="stylesheet" media="all">
 
-        <title>OTServer &mdash; bitaac</title>
+        <title>{{ config('app.name', 'OTServer &mdash; bitaac') }}</title>
     </head>
     <body>
 
