@@ -57,16 +57,18 @@
         </tr>
 
         {{-- 2FA status. --}}
-        <tr>
-            <th>Two-Factor Authentication:</th>
-            <td>
-                @if ($account->secret)
-                    <span class="online">Enabled</span>
-                @else
-                    <span class="offline">Disabled</span>
-                @endif
-            </td>
-        </tr>
+        @if (config('account.two-factor'))
+            <tr>
+                <th>Two-Factor Authentication:</th>
+                <td>
+                    @if ($account->secret)
+                        <span class="online">Enabled</span>
+                    @else
+                        <span class="offline">Disabled</span>
+                    @endif
+                </td>
+            </tr>
+        @endif
     </table>
 
     <table>
@@ -75,7 +77,9 @@
             <td width="100%">
                 <a href="{{ url('/account/email') }}" class="button">Change Email</a>
                 <a href="{{ url('/account/password') }}" class="button">Change Password</a>
-                <a href="{{ url('/account/authentication') }}" class="button">Two-Factor Authentication</a>
+                @if (config('account.two-factor'))
+                    <a href="{{ url('/account/authentication') }}" class="button">Two-Factor Authentication</a>
+                @endif
             </td>
             <td>
                 <a href="{{ url('/account/logout') }}" class="button">Log Out</a>
