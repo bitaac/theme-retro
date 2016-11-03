@@ -45,12 +45,14 @@
             </tr>
 
             {{-- Two-Factor authentication field. --}}
-            <tr>
-                <th>2FA Code:</th>
-                <td>
-                    <input type="text" name="2fa">
-                </td>
-            </tr>
+            @if (config('account.two-factor'))
+                <tr>
+                    <th>2FA Code:</th>
+                    <td>
+                        <input type="text" name="2fa">
+                    </td>
+                </tr>
+            @endif
 
             {{-- Submit button. --}}
             <tr class="transparent noborderpadding">
