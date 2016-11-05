@@ -1,7 +1,4 @@
-
-<?php $group = config('bitaac.server.groups')[$post->player->group_id]; ?>
-
-<tr class="{{ $oddeven }} {{ ($post->player->group_id > 3) ? 'forum-post-gamemaster-top' : '' }}">
+<tr class="{{ $oddeven }} {{ ($post->player->group_id >= 2) ? 'forum-post-gamemaster-top' : '' }}">
 	<td width="20%" valign="top">
 		@if (isset($i))
 			<a name="{{ $i }}"></a>
@@ -12,7 +9,8 @@
 
 		<br>
 
-		@if (isset($group))
+		@if (isset(config('bitaac.server.groups')[$post->player->group_id]))
+            <?php $group = config('bitaac.server.groups')[$post->player->group_id]; ?>
 			<small>{{ $group['presentable'] }}</small><br>
 			@if ($group['image'] != false)
 				<img src="{{ asset('bitaac/retro-theme/images/'.$group['image']) }}"><br>
@@ -52,7 +50,7 @@
 	</td>
 </tr>
 
-<tr class="{{ $oddeven }} forum-post-footer {{ ($post->player->group_id > 3) ? 'forum-post-gamemaster-bot' : '' }}">
+<tr class="{{ $oddeven }} forum-post-footer {{ ($post->player->group_id >= 2) ? 'forum-post-gamemaster-bot' : '' }}">
 	{{-- Post date field. --}}
 	<td>
 		<small>

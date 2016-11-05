@@ -10,7 +10,7 @@
         <!-- Stylesheets -->
         <link href="{{ asset('bitaac/retro-theme/css/app.css?v=14534524686') }}" rel="stylesheet" media="all">
         <link href="{{ asset('bitaac/retro-theme/css/colorbox.css?v=1454524555') }}" rel="stylesheet" media="all">
-        <link href="{{ asset('bitaac/retro-theme/wysiwyg/dist/ui/trumbowyg.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('bitaac/retro-theme/wysiwyg/ui/trumbowyg.min.css') }}" rel="stylesheet" media="all">
 
         <title>{{ config('app.name', 'OTServer &mdash; bitaac') }}</title>
     </head>
@@ -26,8 +26,8 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/guilds') }}">Guilds</a></li>
                     <li><a href="{{ url('/online') }}">Who Is Online</a></li>
-                    <li><a href="#">Staff</a></li>
-                    <li><a href="#">Faq</a></li>
+                    {{-- <li><a href="#">Staff</a></li> --}}
+                    <li><a href="{{ url('/faq') }}">Faq</a></li>
                 </ul>
             </aside>
 
@@ -104,10 +104,9 @@
             </div>
         </section>
 
-
         <!-- Javascripts -->
         <script src="{{ asset('bitaac/retro-theme/js/app.js') }}"></script>
-        <script src="{{ asset('bitaac/retro-theme/wysiwyg/dist/trumbowyg.min.js') }}"></script>
+        <script src="{{ asset('bitaac/retro-theme/wysiwyg/trumbowyg.min.js') }}"></script>
         <script>
             $('#reply').trumbowyg({
                 fullscreenable: false

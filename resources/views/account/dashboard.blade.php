@@ -98,7 +98,7 @@
             <th width="70%">Name</th>
             <th>Gender</th>
             <th>Status</th>
-            <th></th>
+            {{-- <th></th> --}}
         </tr>
 
         @forelse($account->characters as $i => $character)
@@ -120,7 +120,7 @@
                 @else
                     <td>offline</td>
                 @endif
-                <td><a href="#">[edit]</a></td>
+                {{-- <td><a href="#">[edit]</a></td> --}}
             </tr>
         @empty
             <tr>
