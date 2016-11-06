@@ -34,7 +34,7 @@
                             {{ $product->title }}
                         </h4>
 
-                        <img src="https://cdn.rawgit.com/pandaac-cdn/items/1076/{{ $product->item_id }}.gif" width="32" height="32">
+                        <img src="{{ preg_replace('/\{item_id\}/i', $product->item_id, config('bitaac.app.images')) }}" width="32" height="32">
 
                         <br><br>
 
