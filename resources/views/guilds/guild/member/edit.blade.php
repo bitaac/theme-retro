@@ -5,12 +5,12 @@
     <li>Community
     <li><a href="{{ url('/guilds') }}">Guilds</a>
     <li><a href="{{ $guild->link() }}">{{ $guild->name }}</a>
-    <li>Edit Ranks
+    <li>Edit Members
 @stop
 
 @section('content')
     {{-- Page content. --}}
-    @include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild on {server}.'])
+    @include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => ''])
 
     <p>Select a member and the action you want to perform, then click on "Submit".</p>
 

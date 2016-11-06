@@ -5,11 +5,11 @@
     <li>Community
     <li><a href="{{ url('/guilds') }}">Guilds</a>
     <li><a href="{{ $guild->link() }}">{{ $guild->name }}</a>
-    <li>Invite
+    <li>Disband
 @stop
 
 {{-- Page content. --}}
-@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild on {server}.'])
+@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => ''])
 
 @section('content')
 

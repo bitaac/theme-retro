@@ -5,11 +5,11 @@
     <li>Community
     <li><a href="{{ url('/guilds') }}">Guilds</a>
     <li><a href="{{ $guild->link() }}">{{ $guild->name }}</a>
-    <li>Edit Guild
+    <li>Edit
 @stop
 
 {{-- Page content. --}}
-@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild on {server}.'])
+@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => ''])
 
 @section('content')
    <p>If you want to change the description of your guild, edit the corresponding field and click on the "Submit" button.</p>

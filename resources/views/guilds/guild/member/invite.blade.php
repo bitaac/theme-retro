@@ -9,7 +9,7 @@
 @stop
 
 {{-- Page content. --}}
-@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild on {server}.'])
+@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => ''])
 
 @section('content')
 	<p>Enter the name of a character you want to invite to your guild and click on "Submit".</p>

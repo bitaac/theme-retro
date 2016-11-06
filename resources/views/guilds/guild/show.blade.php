@@ -8,7 +8,7 @@
 @stop
 
 {{-- Page content. --}}
-@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild on {server}.'])
+@include('bitaac::partials.heading', ['title' => 'Guilds', 'desc' => 'Information abouts guild.'])
 
 @section('content')
 	<table>
