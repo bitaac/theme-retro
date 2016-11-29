@@ -37,4 +37,21 @@
             </tr>
         @endif
     </table>
+
+    @if (config('bitaac.community.deaths-pagination'))
+        <table>
+            <tr class="transparent noborderpadding">
+                <td>
+                    @if ($previous = $deaths->previousPageUrl())
+                        <a href="{{ url($previous) }}">Previous</a>
+                    @endif
+                </td>
+                <td align="right">
+                    @if ($next = $deaths->nextPageUrl())
+                        <a href="{{ url($next) }}">Next</a>
+                    @endif
+                </td>
+            </tr>
+        </table>
+    @endif
 @endsection
