@@ -27,7 +27,7 @@
                             $google2fa_url = Google2FA::getQRCodeGoogleUrl(
                                 'bitaac',
                                 $account->name,
-                                $account->bit->secret
+                                $account->bitaac->secret
                             );
                         ?>
 

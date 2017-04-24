@@ -14,7 +14,7 @@
             <td width="70%"></td>
             <td align="right" valign="top">
                 @if (Auth::check())
-                    <p>You currently have <span class="inline-box green">{{ $account->bit->points }}</span> points.</p>
+                    <p>You currently have <span class="inline-box green">{{ $account->bitaac->points }}</span> points.</p>
                 @endif
             </td>
         </tr>
