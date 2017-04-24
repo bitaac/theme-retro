@@ -14,7 +14,7 @@
             <td width="70%"></td>
             <td align="right" valign="top">
                 @if (Auth::check())
-                    <p>You currently have <span class="inline-box green">{{ $account->bit->points }}</span> points.</p>
+                    <p>You currently have <span class="inline-box green">{{ $account->bitaac->points }}</span> points.</p>
                 @endif
             </td>
         </tr>
@@ -43,8 +43,8 @@
                         @endif
                         
                         <footer class="footer">
-                            @if (Auth::check() and Auth::user()->bit->points >= $product->points)
-                                <a href="{{ url('/store/claim/'.str_slug($product->title)) }}" class="claim">Claim for <span>{{ $product->points }}</span> points!</a>
+                            @if (Auth::check() and Auth::user()->bitaac->points >= $product->points)
+                                <a href="{{ route('store.claim', $product) }}" class="claim">Claim for <span>{{ $product->points }}</span> points!</a>
                                 <small>
                                     ... or <a href="{{ url('/store/offers') }}">purchase points</a>!
                                 </small>
