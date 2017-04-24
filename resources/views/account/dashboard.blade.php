@@ -35,13 +35,13 @@
         {{-- Account creation. --}}
         <tr>
             <th>Created:</th>
-            <td>{{ $account->bit->created_at }}</td>
+            <td>{{ $account->bitaac->created_at }}</td>
         </tr>
 
         {{-- Account last login. --}}
         <tr>
             <th>Last Login:</th>
-            <td>{{ $account->bit->last_login }}</td>
+            <td>{{ $account->bitaac->last_login }}</td>
         </tr>
 
         {{-- Account status. --}}
