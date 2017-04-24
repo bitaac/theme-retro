@@ -43,7 +43,7 @@
                         @endif
                         
                         <footer class="footer">
-                            @if (Auth::check() and Auth::user()->bit->points >= $product->points)
+                            @if (Auth::check() and Auth::user()->bitaac->points >= $product->points)
                                 <a href="{{ url('/store/claim/'.str_slug($product->title)) }}" class="claim">Claim for <span>{{ $product->points }}</span> points!</a>
                                 <small>
                                     ... or <a href="{{ url('/store/offers') }}">purchase points</a>!
