@@ -15,6 +15,11 @@
         <title>{{ config('app.name', 'OTServer &mdash; bitaac') }}</title>
     </head>
     <body>
+        @if (Session::has('bitaac:impersonator'))
+            <div style="background: #fff; padding: 25px; text-align:center; color: #000;">
+                You are impersonating account <strong>{{ $account->name }}</strong>.<br><br> <a href="{{ route('admin.account.impersonate.stop', $account) }}">(cancel)</a>
+            </div>
+        @endif
 
         <section id="pandaac">
             <header id="header">
@@ -70,11 +75,11 @@
                         <a href="{{ url('/online') }}">Players Online</a>
                         <div class="line"></div>
                         <a href="{{ url('/online') }}">
-                            {{ 
+                            {{
                                 str_e(':online :players', [
                                     'online'  => app('player')->getOnlineList()->count(),
                                     'players' => str_plural('player', app('player')->getOnlineList()->count())
-                                ]) 
+                                ])
                             }}
                         </a>
                         <div class="line"></div>

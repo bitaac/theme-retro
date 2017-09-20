@@ -45,7 +45,7 @@
             </tr>
 
             {{-- Two-Factor authentication field. --}}
-            @if (config('account.two-factor'))
+            @if (config('bitaac.account.two-factor'))
                 <tr>
                     <th>2FA Code:</th>
                     <td>

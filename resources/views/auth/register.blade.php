@@ -24,10 +24,10 @@
             <tr>
                 <th width="20%"><label>Account:</label></th>
                 <td>
-                    <input type="text" name="account" value="{{ old('account') }}">
+                    <input type="text" name="name" value="{{ old('name') }}">
 
-                    @if ($errors->has('account'))
-                        <em class="error">{{ $errors->first('account') }}</em>
+                    @if ($errors->has('name'))
+                        <em class="error">{{ $errors->first('name') }}</em>
                     @endif
                 </td>
             </tr>

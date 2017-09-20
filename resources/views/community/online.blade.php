@@ -8,7 +8,7 @@
     @stop
 
     {{-- Page content. --}}
-    @include('bitaac::partials.heading', ['title' => 'Who Is Online', 'desc' => '<p>There are currently <strong>'.$online->count().'</strong> players online. The record holds a total of <strong>'.$player->getOnlineRecord().'</strong> players.</p>'])
+    @include('bitaac::partials.heading', ['title' => 'Who Is Online', 'desc' => '<p>There are currently <strong>'.$players->count().'</strong> players online. The record holds a total of <strong>'.getOnlineRecord().'</strong> players.</p>'])
 
     <table>
         <tr class="header">
@@ -21,16 +21,16 @@
         </tr>
 
         {{-- Characters. --}}
-        @forelse ($online as $character)
+        @forelse ($players as $player)
             <tr>
                 {{-- Name field. --}}
-                <td><a href="{{ $character->link() }}">{{ $character->name }}</a></td>
+                <td><a href="{{ $player->link() }}">{{ $player->name }}</a></td>
 
                 {{-- Level field. --}}
-                <td>{{ $character->level }}</td>
+                <td>{{ $player->level }}</td>
 
                 {{-- Vocation field. --}}
-                <td>{{ vocation($character->vocation) }}</td>
+                <td>{{ vocation($player->vocation) }}</td>
             </tr>
         @empty
             <tr>

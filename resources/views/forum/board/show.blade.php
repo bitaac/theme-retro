@@ -18,7 +18,7 @@
     	<tr class="transparent noborderpadding">
     		<td>
     			@if (auth()->check() && (! $board->news or auth()->user()->isAdmin()))
-    				<a href="{{ URL::current() }}/create" class="button">Create Thread</a>
+    				<a href="{{ route('forum.thread.create', $board) }}" class="button">Create Thread</a>
     			@endif
     		</td>
     		<td colspan="3" align="right">
@@ -52,7 +52,7 @@
     					<img src="{{ asset('packages/pandaac/theme-retro/img/pin.png') }}" style="vertical-align: top;" title="sticked">
     				@endif --}}
 
-    				<a href="{{ url_e('/forum/:board/:title', ['board' => $board->title, 'title' => $thread->title]) }}">{{ $thread->title }}</a>
+    				<a href="{{ $thread->link() }}">{{ $thread->title }}</a>
 
     				{{-- @if ($total = Config::get('pandaac::forum.posts-per-page') and $ceil = ceil(($thread->posts->count() + 1) / $total) and $ceil > 1)
     					<small>
@@ -87,11 +87,11 @@
     				@if ($latest = $thread->replies->last())
     					<small>
     						by
-    						<a href="{{ url_e('/forum/:board/:title#2', ['board' => $board->title, 'title' => $thread->title]) }}">
+    						<a href="{{ $thread->hotlink($latest) }}">
                                 <img src="{{ asset('bitaac/retro-theme/images/forum-latest.png') }}" class="forum-post-latest" width="8" height="8">
                             </a>
 
-    						<a href="{{ url_e('/character/:name', ['name' => $latest->player->name]) }}">{{ $latest->player->name }}</a>,
+    						<a href="{{ $latest->player->link() }}">{{ $latest->player->name }}</a>,
 
     						<abbr title="{{ date('M d Y, H:i:s T', strtotime($latest->created_at)) }}">
                                 {{ ago(strtotime($latest->created_at)) }}
@@ -116,7 +116,7 @@
     	<tr class="transparent noborderpadding">
     		<td>
     			@if (auth()->check() && (! $board->news or auth()->user()->admin))
-    				<a href="{{ URL::current() }}/create" class="button">Create Thread</a><br><br>
+    				<a href="{{ route('forum.thread.create', $board) }}" class="button">Create Thread</a><br><br>
     			@endif
     		</td>
     		<td colspan="3" align="right"></td>

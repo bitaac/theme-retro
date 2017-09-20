@@ -22,7 +22,7 @@
             <tr>
                 <td>
                     {{-- Title field. --}}
-                    <a href="{{ url_e('/forum/:title', ['title' => $board->title]) }}">{{ $board->title }}</a>
+                    <a href="{{ $board->link() }}">{{ $board->title }}</a>
 
                     {{-- Description field. --}}
                     @if ($board->description)
@@ -39,11 +39,11 @@
                 {{-- Latest post field. --}}
                 <td>
                     @if ($board->threads->count())
-                        <?php 
+                        <?php
                             $latest = $board->latest();
                         ?>
 
-                        <a href="{{ url_e('/forum/:board/:title', ['board' => $board->title, 'title' => $latest->title]) }}">
+                        <a href="{{ $latest->link() }}">
                             {{ $latest->title }}
                         </a>
 
@@ -51,9 +51,9 @@
 
                         <small>
                             by
-                            <a href="{{ url_e('/forum') }}">
-                                <img src="{{ asset('bitaac/retro-theme/images/forum-latest.png') }}" class="forum-post-latest" width="8" height="8">
-                            </a>
+
+                            <img src="{{ asset('bitaac/retro-theme/images/forum-latest.png') }}" class="forum-post-latest" width="8" height="8">
+
 
                             <a href="{{ $latest->player->link() }}">
                                 {{ $latest->player->name }}

@@ -17,6 +17,6 @@ class RetroThemeServiceProvider extends AggregateServiceProvider
 
         $this->publishes([
             __DIR__.'/../public' => public_path('bitaac/retro-theme'),
-        ], 'public');
+        ], 'bitaac:assets');
     }
 }
